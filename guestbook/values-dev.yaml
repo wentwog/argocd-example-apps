@@ -1,4 +1,4 @@
 testProp: testValue
 
-XallowedExternalServices:
+allowedExternalServices:
   - dnsName: chart-dev-value
