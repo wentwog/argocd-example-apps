@@ -6,6 +6,7 @@ spec:
   workloadSelector:
     labels:
       app: {{ .Values.serviceName | lower }}
+      anakTest: {{ .Values.testProp }}
   egress:
     - hosts:
         - "istio-system/istio-telemetry.istio-system.svc.cluster.local"

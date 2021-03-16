@@ -1,2 +1,4 @@
+testProp: testValue
+
 allowedExternalServices:
   - dnsName: dev-host
