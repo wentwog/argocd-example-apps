@@ -2,3 +2,4 @@ testProp: testValue
 
 allowedExternalServices:
   - dnsName: chart-dev-value
+  - dnsName: chart-dev-value-2
