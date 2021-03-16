@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Sidecar
+metadata:
+  name: {{ .Values.serviceName | lower }}
+spec:
+  workloadSelector:
+    labels:
+      app: {{ .Values.serviceName | lower }}
+  egress:
+    - hosts:
+        - "istio-system/istio-telemetry.istio-system.svc.cluster.local"
+        - "istio-system/istio-policy.istio-system.svc.cluster.local"
+        {{- range .Values.allowedExternalServices }}
+        - "external-services/{{ .dnsName }}"
+        {{- end }}
