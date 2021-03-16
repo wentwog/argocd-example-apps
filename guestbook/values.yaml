@@ -1,0 +1,2 @@
+allowedExternalServices:
+  - dnsName: chart-value
